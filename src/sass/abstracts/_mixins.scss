@@ -1,0 +1,121 @@
+/*
+
+MEDIA QUERY MANAGER
+
+GLOBAL BREAK-POINTS
+Considering the resolution and more, the unit em is best practice.
+1em = 16px
+
+$mobile-breakpoint1: 37.5em; 600px/16px (the root)
+$mobile-breakpoint2: 43.5em; 700px/16px (the root)
+$tab-port-breakpoint1: 56.25em; 900px/16px (the root)
+$tab-port-breakpoint2: 62.5em; 1000px/16px (the root)
+$tab-land-breakpoint: 75em; 1200px/16px (the root)
+
+Smart Order of fixing things:
+1. Base
+2. typography
+3. general layout
+4. grid
+5. page layout
+6. components
+
+*/
+
+$mobile-breakpoint: 43.5em;
+$tablet-breakpoint: 62.5em;
+$big-breakpoint: 90.5em;
+$largest-breakpoint: 110em;
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: $mobile-breakpoint) { @content };    //600px
+    }
+
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: $tablet-breakpoint) { @content };     //900px
+    }
+
+    @if $breakpoint == big {
+        @media only screen and (min-width: $big-breakpoint) { @content };     //900px
+    }
+
+    @if $breakpoint == largest {
+        @media only screen and (min-width: $largest-breakpoint) { @content };     //900px
+    }
+}
+
+@mixin typographyColor($property) {
+
+  &--white {
+      #{$property}: $color-white;
+  }
+
+  &--black {
+      #{$property}: $color-black;
+  }
+
+  &--primary {
+      #{$property}: $color-primary;
+  }
+
+  &--primary-light {
+      #{$property}: $color-primary-light;
+  }
+
+  &--primary-dark {
+      #{$property}: $color-primary-dark;
+  }
+
+  &--secondary {
+      #{$property}: $color-secondary;
+  }
+
+  &--secondary-light {
+      #{$property}: $color-secondary-light;
+  }
+
+  &--secondary-dark {
+      #{$property}: $color-secondary-dark;
+  }
+
+  &--tertiary {
+      #{$property}: $color-tertiary;
+  }
+
+  &--tertiary-light {
+      #{$property}: $color-tertiary-light;
+  }
+
+  &--tertiary-dark {
+      #{$property}: $color-tertiary-dark;
+  }
+
+  &--gray {
+      #{$property}: $color-gray;
+  }
+
+  &--gray-light {
+      #{$property}: $color-gray-light;
+  }
+
+  &--gray-dark {
+      #{$property}: $color-gray-dark;
+  }
+}
+
+
+@mixin clearfix {
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,49 @@
+// FONTS
+
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Roboto Slab', sans-serif;
+
+// FONT SIZES
+
+$default-font-size: 1.5rem;
+$default-heading-size: 3.5rem;
+
+// COLORS
+
+$color-balance-light: 3%;
+$color-balance-mid: 10%;
+$color-balance-hard: 15%;
+$color-balance-extreme: 35%;
+
+$color-primary: #6ec6d9;
+$color-primary-light: lighten($color-primary, $color-balance-mid);
+$color-primary-dark: darken($color-primary, $color-balance-extreme);
+
+$color-secondary: #ffefab;
+$color-secondary-light: lighten($color-secondary, $color-balance-mid);
+$color-secondary-dark: darken($color-secondary, 60%);
+
+$color-tertiary: #f9cddd;
+$color-tertiary-light: lighten($color-tertiary, $color-balance-mid);
+$color-tertiary-dark: #B797A3;
+
+$color-white: #fff;
+$color-almost-white: #fcfcfc;
+$color-white-dark: #f7f7f7;
+
+$color-black: #1c1c1c;
+$color-almost-black: #070707;
+$color-hazy-black: #212121;
+$color-black-dark: #000;
+
+$color-gray: #6b6b6b;
+$color-gray-light: #d0d0d0;
+$color-gray-dark: #aaa9a9;
+
+// BOX SHADOWS
+
+$box-shadow: 0 1rem 1rem rgba($color-black, 0.5);
+$box-shadow-light: 0 1rem 1rem rgba($color-black, 0.2);
+$box-shadow-dark: 0.2rem 1rem 0.7rem rgba($color-black, 0.6);
+$box-shadow-extreme: 0.2rem 1rem 0.7rem rgba($color-black, 0.8);
+

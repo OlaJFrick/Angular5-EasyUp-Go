@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+// * {
+//  outline: 1px solid red;
+// }
+
+html {
+  //This defines what 1 rem is gloabaly
+  font-size: 62.5%; // 1 rem = 10px
+  font-family: 'roboto';
+
+  /*
+    Define the global size of all elements (defined by rem)
+    How much do you you want 1 px to be?
+    1 rem = 12px 12/16 = 75%
+  */
+
+  @include respond(tablet) {
+    // font-size: 50%;
+  }
+
+  @include respond(mobile) {
+    // font-size: 50%;
+  }
+
+  @include respond(big) {
+    // font-size: 65%;
+  }
+
+  @include respond(largest) {
+    // font-size: 70%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-size: $default-font-size;
+  background-color: $color-white;
+  color: $color-primary;
+}
