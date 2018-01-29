@@ -1,13 +1,10 @@
 <h1 class="headline">
-  My quick start-up repo for Angular & Sass structure
+  {{pageText.headerTitle}}
 </h1>
+<h5>{{company.email}}</h5>
 
-<app-button [textInput]="message"></app-button>
-<app-button [commandInput]="message2"></app-button>
+<app-button [defaultBtnText]="pageText.btn1"></app-button>
+<app-button [secondaryBtnText]="pageText.btn2"></app-button>
 
-<!-- <button [ngx-scroll-to]="'#destination'">Go to destination</button>
-
-<div id="destination">
-  You've reached your destination.
-</div> -->
-
+<!-- <app-use-language-switch></app-use-language-switch> -->
+<!-- <app-use-ng-scroll></app-use-ng-scroll> -->
